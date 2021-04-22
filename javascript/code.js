@@ -642,15 +642,15 @@ window.onload = function() {
             point = settings.element.point; //On mets dans points le nombre de points de l'element qui est toucher
           }
 
-        // Si il s'agit de  dark vador on retire le nombre de point de l'element (ici l'element c'est dark vador)
+          // Si il s'agit de  dark vador on retire le nombre de point de l'element (ici l'element c'est dark vador)
           if (settings.type == 'darthvader') {
             Game.settings.reduitScore += settings.element.point;
           }
 
-        // On incremente le score total
+          // On incremente le score total
           Game.settings.totalScore += point;
 
-        //Si le score a enlever est superieur à 0
+          //Si le score a enlever est superieur à 0
           if (Game.settings.reduitScore > 0) {
             Game.settings.totalScore -=  Game.settings.reduitScore;
             Game.settings.scoreFinal.style.color = 'red';
@@ -669,6 +669,6 @@ window.onload = function() {
     }
   };
 
-//Initialise le jeu
+  //Initialise le jeu
   Game.initialise();
 }
