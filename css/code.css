@@ -61,14 +61,6 @@ section article:nth-child(3) {
     margin:0 0 0 30px;
 }
 
-#error {
-    color: #fff;
-    position: absolute;
-    width: 93%;
-    left: 9px;
-    background-color: #d07426;
-}
-
 #resetTime {
     font-size: 30px;
 }
