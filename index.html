@@ -1,0 +1,111 @@
+<html>
+
+<head>
+  <title>La guerre des etoiles</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Mohamed Gueye" />
+  <link rel="stylesheet" type="text/css" href="css/code.css"/>
+</head>
+<body>
+
+
+  <section>
+    <article>
+      <label> <p>Pseudo:  </p></label>
+      <input type="text" onkeyup="success()" name="player" id="player" value="" placeholder="Veuillez saisir un pseudo"/>
+      <p id="error"></p>
+
+      <button id="playButton" disabled><p>Play</p></button>
+      <br/>
+
+      <div class="instructions">
+
+        <h2><u>Instructions</u></h2>
+        <p> <img src="images/keyboard.png" alt="fleche directionnelles"> contrôle R2D2. </p>
+        <p> L'objectif est d'avoir le plus gros score possible à la fin de la partie pour cela : </p>
+        <ul>
+          <li> - Evitez les avions pour obtenir des points</li>
+          <li> - Ne touchez pas à Dark Vador ! Sinon sa force vous fera perdre des points !</li>
+          <li> - Plus le combat est long et plus la difficulté augmente, restez concentré.</li>
+          <li> - Que la force soit avec toi. </li>
+        </ul>
+      </div>
+
+    </article>
+
+    <article>
+      <h1><p><img src="images/star-icon.png" alt="star"> La guerre des étoiles <img src="images/star-icon.png" alt="star"> </p>  </h1>
+      <div id="map">
+        <div id="msgEcranJeu">
+          <div class="text">
+            Saisissez un pseudo puis appuyer sur Play pour jouer.
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article>
+      <div class="instructions">
+
+        <div id="tableScore" class="hide">
+          <label>Total Points : </label>
+          <p id="totalScore">0</p>
+        </div>
+        <div id="minuteur" class="hide">
+          <label>Temps restant: </label>
+          <p id="resetTime"></p>
+        </div>
+        <div id="speed" class="hide">
+          <label>Vitesse : </label>
+          <p id="currentSpeed">20</p>
+        </div>
+        <div id="niveau" class="hide">
+          <label>Niveau : </label>
+          <p id="currentNiveau">1</p>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <section>
+    <div class="ptsInstruction">
+      <img src="images/darthvader.png" alt="darthvader">
+      <p>-500 pts</p>
+    </div>
+
+    <div class="ptsInstruction">
+      <img src="images/anakin_starfighter.png" alt="anakin">
+      <p>+150 pts</p>
+    </div>
+
+    <div class="ptsInstruction">
+      <img src="images/naboo_starfighter.png" alt="naboo">
+      <p>+150 pts</p>
+    </div>
+
+    <div class="ptsInstruction">
+      <img src="images/obi_wan_starfighter.png" alt="obi_wan">
+      <p>+150 pts</p>
+    </div>
+
+    <div class="ptsInstruction">
+      <img src="images/x_wing.png" alt="x_wing">
+      <p>+150 pts</p>
+    </div>
+  </section>
+
+</body>
+<script type="text/javascript" src="javascript/code.js"></script>
+</html>
+
+<script type="text/javascript">
+function success() {
+  if(document.getElementById("player").value==="") {
+    document.getElementById('playButton').disabled = true;
+  } else {
+    document.getElementById('playButton').disabled = false;
+  }
+}
+</script>
