@@ -259,9 +259,9 @@ window.onload = function() {
       reduitScore: 0,
       ennemyKey: '',
       success:  '<div id="msgEcranJeu"><div class="text resultat">\n' +
-      '    <p>BRAVO ###PSEUDO### !</p>\n' +
-      '    <p>Ton score total est de <strong>###POINT###</strong> point !</p>\n' +
-      '    <p>Sur la voie, toi être <img src="images/yoda.png" alt="yoda"> </p>\n' +
+      '    <p>BRAVO ###PSEUDO### !</p><br/>' +
+      '    <p>Ton nombre total de point est de <strong>###POINT###</strong> !</p><br/>' +
+      '    <p>Sur la voie, toi être <img src="images/yoda.png" alt="yoda"> </p>' +
 
       '</div></div>',
       limiteMinutes: 1,
@@ -272,7 +272,7 @@ window.onload = function() {
       arrowDown: false,
       listEnnemy: [],
       listEnnemySettings:[],
-      run:false,
+      gameRun:false,
     },
 
 
@@ -379,7 +379,7 @@ window.onload = function() {
     startGame: function() {
 
       //Défini que le jeu est en cours
-      Game.settings.run = true;
+      Game.settings.gameRun = true;
 
       //Enleve l'écran d'instruction et lance l'écran de jeu
       Game.startScreen();
@@ -402,7 +402,7 @@ window.onload = function() {
     endGame: function() {
 
       //Défini que le jeu n'est plus en cours
-      Game.settings.run = false;
+      Game.settings.gameRun = false;
 
       setTimeout(function() {
 
@@ -650,7 +650,7 @@ window.onload = function() {
         // On incremente le score total
           Game.settings.totalScore += point;
 
-        //Si le score
+        //Si le score a enlever est superieur à 0
           if (Game.settings.reduitScore > 0) {
             Game.settings.totalScore -=  Game.settings.reduitScore;
             Game.settings.scoreFinal.style.color = 'red';
@@ -669,5 +669,6 @@ window.onload = function() {
     }
   };
 
+//Initialise le jeu
   Game.initialise();
 }
