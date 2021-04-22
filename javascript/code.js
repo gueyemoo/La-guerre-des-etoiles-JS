@@ -316,23 +316,23 @@ window.onload = function() {
 
         {
           posX: 60,
-          posY: 150,
-          point: 150,
-          width:128,
-          height:128,
-          type: 'vol',
-          imgPath: 'images/obi_wan_starfighter.png',
-          insideDOM: Game.settings.map
-        },
-
-        {
-          posX: 60,
           posY: 250,
           point: 150,
           width:128,
           height:128,
           type: 'vol',
           imgPath: 'images/x_wing.png',
+          insideDOM: Game.settings.map
+        },
+
+        {
+          posX: 60,
+          posY: 150,
+          point: 150,
+          width:128,
+          height:128,
+          type: 'vol',
+          imgPath: 'images/obi_wan_starfighter.png',
           insideDOM: Game.settings.map
         },
 
